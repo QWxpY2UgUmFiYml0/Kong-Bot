@@ -1,4 +1,5 @@
 from disco.bot import Plugin
+import random
 
 ###How to turn the damn thing on###
 #python -m disco.cli --config config.json
@@ -18,3 +19,17 @@ class HardR(Plugin):
     def on_hard_r(self, event):
         if "nigger" in event.message.content:
             event.reply("Whoa there buddy")
+
+class RollDie(Plugin):
+    @Plugin.command('roll', '<num:int> <sides:int>')
+    def roll_die(self, event, num, sides):
+        event.msg.reply('rolling ''{}''d''{}''\n''{}'.format(num, sides, roll(num, sides)))
+
+def roll(num, sides):
+    list = []
+    for n in range(num):
+        list.insert(n, random.randint(1, sides))
+    return list
+
+
+        
