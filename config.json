@@ -1,8 +1,0 @@
-{
-    "token": "NDUyNTYzNTcwOTc5MjQxOTg0.DfSOyA.Brt3UjJfSqC4h9LRhqa9cvT6jaA",
-    "bot": {
-        "plugins": [
-            "plugins.kong-bot"
-        ]
-    }
-}
